@@ -9,7 +9,7 @@ $ sudo apt install postgresql postgresql-contrib
 $ sudo -u postgres psql -c "SELECT version();"
 ```
 
-## Login as default user
+## Connect to PostgreSQL
 _As the default configuration of Postgres is, a user called postgres is made on and the user postgres has full superadmin access to entire PostgreSQL instance running on your OS._
 ```bash
 $ sudo -u postgres psql
