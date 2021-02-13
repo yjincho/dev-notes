@@ -47,6 +47,18 @@ postgres=# ALTER USER <username> WITH ENCRYPTED PASSWORD '<password>';
 postgres=# GRANT ALL PRIVILEGES ON DATABASE <dbname> TO <username>;
 ```
 
+## Backup
+https://www.postgresqltutorial.com/postgresql-backup-database/
+```
+pg_dump -U postgres -W -F t <dbname> > backup_file.tar
+```
+
+## Restore
+https://www.postgresqltutorial.com/postgresql-restore-database/
+```
+pg_restore --dbname=<dbname> --verbose backup_file.tar
+```
+
 ## Allowing external access
 ```
 $ sudo vim /etc/postgresql/<version>/main/postgresql.conf
@@ -64,3 +76,7 @@ host all all 0.0.0.0/0 md5
 ```
 $ sudo /etc/init.d/postgresql restart
 ```
+
+# Reference
+
+- [PostgreSQL Tutorial](https://www.postgresqltutorial.com/)
