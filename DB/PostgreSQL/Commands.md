@@ -32,7 +32,7 @@ dbname=#
 postgres=# \q
 ```
 
-## Creating Tables
+## Creating a Table
 
 ```
 postgres=# CREATE TABLE playground (
@@ -44,10 +44,20 @@ postgres=# CREATE TABLE playground (
 );
 ```
 
-## Deleting Tables
+## Deleting a Table
 
 ```
 postgres=# DROP TABLE playground;
+```
+
+## Deleting All Tables
+
+```
+postgres=# DROP SCHEMA public CASCADE;
+postgres=# CREATE SCHEMA public;
+
+postgres=# GRANT ALL ON SCHEMA public TO postgres;
+postgres=# GRANT ALL ON SCHEMA public TO public;
 ```
 
 ## Adding, Querying, and Deleting Data in a Table
