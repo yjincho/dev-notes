@@ -45,19 +45,21 @@ $ netstat -nap | grep <port>
 $ fuser -k -n tcp <port>
 ```
 
+## Delete a file and prompt before every removal
+```
+$ rm -i <filename>
+```
+_Pass the -v option as follows to get verbose output_
+```
+$ rm -v <filename>
+```
+
+
 ## Delete multiple files
 ```
 $ rm <filename1> <filename2> <filename3>
 ```
 
-## Delete a file and prompt before every removal
-```
-$ rm -i <filename1>
-```
-_Pass the -v option as follows to get verbose output_
-```
-$ rm -v <filename1>
-```
 
 ## Delete all files in folder or directory
 ```
@@ -66,7 +68,7 @@ $ rm -rf /path/to/dir/
 
 ## Copy a file to directory
 ```
-$ cp <filename1> /path/to/dir/
+$ cp <filename> /path/to/dir/
 ```
 
 ## Copy multiple files to directory
