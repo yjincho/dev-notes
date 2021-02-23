@@ -45,6 +45,50 @@ $ netstat -nap | grep <port>
 $ fuser -k -n tcp <port>
 ```
 
+## Delete multiple files
+```
+$ rm <filename1> <filename2> <filename3>
+```
+
+## Delete a file and prompt before every removal
+```
+$ rm -i <filename1>
+```
+_Pass the -v option as follows to get verbose output_
+```
+$ rm -v <filename1>
+```
+
+## Delete all files in folder or directory
+```
+$ rm -rf /path/to/dir/
+```
+
+## Copy a file to directory
+```
+$ cp <filename1> /path/to/dir/
+```
+
+## Copy multiple files to directory
+```
+$ cp <filename1> <filename2> /path/to/dir/
+```
+_Pass the -v option as follows to get verbose output_
+```
+$ cp -v <filename1> <filename2> /path/to/dir/
+```
+
+## Rename a file
+```
+$ mv <filename> <new_filename>
+```
+
+## Move a file to a new location
+```
+$ mv <filename> /path/to/dir/
+```
+
+
 ## How To Configure IP Address In Ubuntu 18.04
 ```
 $ cd /etc/netplan/
@@ -87,3 +131,18 @@ $ ip addr show dev ens3
 ```
 
 That’s it! You have assigned a static IP to your Ubuntu server.
+
+## How to Install Node
+```
+$ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash 
+$ sudo apt-get install -y nodejs
+```
+
+
+## How to Install Yarn
+```
+$ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+$ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+$ sudo apt update
+$ sudo apt install yarn
+```
