@@ -1,6 +1,6 @@
 # PostgreSQL
 
-## Installing PostgreSQL on Ubuntu
+## Install PostgreSQL on Ubuntu
 ```bash
 $ sudo apt update
 $ sudo apt install postgresql postgresql-contrib
@@ -59,7 +59,7 @@ https://www.postgresqltutorial.com/postgresql-restore-database/
 pg_restore --dbname=<dbname> --verbose backup_file.tar
 ```
 
-## Allowing external access
+## Allow external access
 ```
 $ sudo vim /etc/postgresql/<version>/main/postgresql.conf
 
@@ -75,6 +75,24 @@ host all all 0.0.0.0/0 md5
 ```
 ```
 $ sudo /etc/init.d/postgresql restart
+```
+
+## Remove PostgreSQL on Ubuntu
+```
+$ dpkg -l | grep postgres
+$ sudo apt-get --purge remove postgresql\*
+```
+
+```
+$ rm -rf /etc/postgresql/
+$ rm -rf /etc/postgresql-common/
+$ rm -rf /var/lib/postgresql/
+```
+
+## Start/Stop PostgreSQL systemctl service
+```
+$ sudo systemctl start postgresql
+$ sudo systemctl stop postgresql
 ```
 
 # Reference
