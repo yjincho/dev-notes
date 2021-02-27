@@ -1,5 +1,3 @@
-# Git
-
 ## Setting your username & email 
 ```
 $ git config --global user.name "John Doe"
