@@ -1,4 +1,4 @@
-# PostgreSQL
+# PostgreSQL Configuration 
 
 ## Install PostgreSQL on Ubuntu
 ```bash

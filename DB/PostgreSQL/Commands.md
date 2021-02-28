@@ -1,4 +1,4 @@
-# PostgreSQL
+# PostgreSQL Commands
 
 ## Listing Databases
 
