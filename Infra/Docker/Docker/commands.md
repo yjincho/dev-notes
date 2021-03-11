@@ -1,5 +1,3 @@
-# Docker
-
 ## The storage location of Docker images and containers
 ```
 $ sudo su -
@@ -16,4 +14,20 @@ $ docker cp [HOST_PATH] [CONTAINER_NAME]:[CONTAINER_PATH]
 _Container -> Host_
 ```
 $ docker cp [CONTAINER_NAME]:[CONTAINER_PATH] [HOST_PATH]
+```
+
+## Stop & Delete all containers
+```
+$ docker stop $(docker ps -a -q)
+$ docker rm $(docker ps -a -q)
+```
+
+## Delete all 'untagged/dangling' (<none>) images
+```
+$ docker rmi $(docker images -q -f dangling=true)
+```
+
+## Delete all images
+```
+$ docker rmi $(docker images -q)
 ```
